@@ -1,3 +1,4 @@
 [submodule "derjeofizik.github.io"]
 	path = derjeofizik.github.io
 	url = https://github.com/DERJeofizik/derjeofizik.github.io
+    branch = master
