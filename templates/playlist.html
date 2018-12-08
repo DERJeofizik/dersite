@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }} - Der Jeofizik{% endblock %}
+{% block subtitle %}
+  <h2>{{ title }}</h2>
+{% endblock %}
+{% block style %}
+  #content {
+  justify-content: center;
+  }
+{% endblock %}
+{% block content %}
+  {% for entry in entries %}
+    {% include "embed.html" %}
+  {% endfor %}
+{% endblock %}

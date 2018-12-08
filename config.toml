@@ -1,0 +1,10 @@
+title = "DER Jeofizik"
+channel_id = "UCJjDSNZrtrKTmlNjAjuhP0Q"
+base_url = "https://derjeofizik.github.io"
+template_dir = "templates"
+output_dir = "output"
+include_dir = "templates/include"
+deploy_dir = "derjeofizik.github.io"
+
+[extra_notes]
+6D_Lo6ti9OY = "notes/karayip.md"

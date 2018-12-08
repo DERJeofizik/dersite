@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}{{ sitetitle }}{% endblock %}
+{% block content %}
+  {% for entry in entries %}
+    <div class="video-card">
+      <a href="video/{{entry['slug']}}.html">
+        <img src="{{ entry['thumbnail'] }}" /></a>
+      <a href="video/{{entry['slug']}}.html" class="name">{{ entry['title'] }}</a>
+    </div>
+ {% endfor %}
+{% endblock %}

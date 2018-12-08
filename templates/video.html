@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block title %}{{ entry['title'] }} - {{ sitetitle }}{% endblock %}
+{% block subtitle %}
+  <h2>{{ entry['title'] }}</h2>
+{% endblock %}
+{% block content %}
+  {% include "embed.html" %}
+{% endblock %}

@@ -1,0 +1,22 @@
+<div class="video-watch">
+  <div class="container">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/{{entry['id']}}"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <div class="description">
+    {% autoescape false %}
+      {{ entry['description'] | replace("\n", "<br />") | regex_replace("(https*://[a-zA-Z0-9\./%_\-:]+)", "<a href=\g<0>>\g<0></a>")}}
+    {% endautoescape %}
+  </div>
+  {% if "extra_note" in entry %}
+    <div class="extra-note">
+      {% autoescape false %}
+        {{ entry['extra_note'] }}
+      {% endautoescape %}
+    </div>
+  {% endif %}
+</div>

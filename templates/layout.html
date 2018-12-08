@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+      {% block style %}{% endblock %}
+    </style>
+    <link href="{{ base_url }}/main.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="header">
+      <a href="{{ base_url }}/index.html">
+        <img alt="Logo" src="{{ base_url }}/images/logo.png" width="100", height="100" />
+        <h1>{{ sitetitle }}</h1>
+      </a>
+    </div>
+    <div id="menu">
+      {% block menu %}
+        <ul>
+          {% for playlist in playlists %}
+            <li><a href="{{ base_url }}/liste/{{ playlist['slug'] }}.html">{{ playlist['title'] }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endblock %}
+    </div>
+    <div id="subtitle"><h2>{% block subtitle %}{% endblock %}</h2></div>
+    <div id="content">{% block content %}{% endblock %} </div>
+    <div id="footer">
+      {% block footer %}
+        <span>DER Jeofizik &copy; 2018</span> |
+        <a href="https://www.youtube.com/channel/UCJjDSNZrtrKTmlNjAjuhP0Q">
+          <img alt="Youtube" src="{{ base_url }}/images/youtube.png"/>
+        </a> |
+        <a href="https://twitter.com/derjeofizik">
+          <img alt="Twitter" src="{{ base_url }}/images/twitter.png"/>
+        </a> |
+        <a href="https://github.com/derjeofizik">
+          <img alt="Github" src="{{ base_url }}/images/github.png"/>
+        </a>
+      {% endblock %}
+    </div>
+  </body>
+  </body>
+</html>
