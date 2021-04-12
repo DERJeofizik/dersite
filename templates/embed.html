@@ -9,7 +9,7 @@
   </div>
   <div class="description">
     {% autoescape false %}
-      {{ entry['description'] | replace("\n", "<br />") | regex_replace("(https*://[a-zA-Z0-9\./%_\-:]+)", "<a href=\g<0>>\g<0></a>")}}
+      {{ entry['description'] | replace("\n", "<br />") | regex_replace("(https*://[a-zA-Z0-9\./%_\-:\?=]+)", "<a href=\g<0>>\g<0></a>")}}
     {% endautoescape %}
   </div>
   {% if "extra_note" in entry %}
