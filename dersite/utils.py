@@ -48,9 +48,12 @@ def slug_entries(entries):
         entry["slug"] = slugify(entry["title"])
 
 
-def load_youtube_data(filename):
+def load_youtube_data(filename, channel=False):
     data = load_json(filename)
-    slug_entries(data["entries"])
+    if channel:
+        slug_entries(data["entries"][0]["entries"])
+    else:
+        slug_entries(data["entries"])
     return data
 
 
