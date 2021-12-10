@@ -61,3 +61,10 @@ You can run local server:
 
 
 You can go to http://localhost:8000 to visit the web site.
+
+Or you can run a development server with live reloading (requires
+`livereload` package).
+
+```
+./run.py devserver
+```

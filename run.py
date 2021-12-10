@@ -9,6 +9,7 @@ from dersite.download import download_channel_info
 from dersite.create import create
 from dersite.config import load_config
 from dersite.server import run_local_server
+from dersite.server import run_dev_server
 from dersite.deploy import deploy
 
 if __name__ == "__main__":
@@ -40,6 +41,15 @@ if __name__ == "__main__":
     parser_server.add_argument("--port", "-p", default=8000,
                                help="localhost port (8000)")
 
+    parser_server = subparsers.add_parser("devserver",
+                                          help="Run local web server with livereload")
+    parser_server.add_argument("config_file", default="config.toml",
+                               nargs="?", help="config file (toml)")
+    parser_server.add_argument("--ip", default="localhost",
+                               help="localhost ip (localhost)")
+    parser_server.add_argument("--port", "-p", default=8000,
+                               help="localhost port (8000)")
+
     parser_deploy = subparsers.add_parser("deploy",
                                           help="Run deployment commands")
     parser_deploy.add_argument("config_file", default="config.toml",
@@ -57,6 +67,8 @@ if __name__ == "__main__":
         create(conf, args.data_filename, args.base_url)
     elif args.command == "server":
         run_local_server(conf, args.ip, args.port)
+    elif args.command == "devserver":
+        run_dev_server(conf, args.ip, args.port)
     elif args.command == "deploy":
         deploy(conf)
     else:
