@@ -37,7 +37,11 @@ def slugify(name):
         ",": "",
         "/": "_",
         "?": "",
-        "'": ""
+        "'": "",
+        "(": "",
+        ")": "",
+        ":": "",
+        "-": "_"
     }
     slug = name.lower()
     for a, b in conversions.items():
