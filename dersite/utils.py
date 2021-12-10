@@ -8,6 +8,7 @@ import glob
 import shutil
 
 import toml
+import datetime
 
 
 def load_json(filename):
@@ -82,3 +83,7 @@ def copy_files(files, dst_folder):
 
 def parse_toml(filename_or_str):
     return toml.loads(filename_or_str)
+
+
+def get_cur_time():
+    return datetime.datetime.today()

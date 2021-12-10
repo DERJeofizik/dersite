@@ -67,7 +67,8 @@ def create(conf: Config, data_filename, base_url=None):
         "pages": pages,
         "video_url": "video",
         "page_url": "sayfa",
-        "list_url": "liste"
+        "list_url": "liste",
+        "published_date": utils.get_cur_time()
     }
 
     print("Creating index.html...")
