@@ -4,13 +4,13 @@
 
 import argparse
 
+from dersite import download_channel_info
+from dersite import create
+from dersite import load_config
+from dersite import run_local_server
+from dersite import run_dev_server
+from dersite import deploy
 
-from dersite.download import download_channel_info
-from dersite.create import create
-from dersite.config import load_config
-from dersite.server import run_local_server
-from dersite.server import run_dev_server
-from dersite.deploy import deploy
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run")
