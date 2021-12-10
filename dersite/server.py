@@ -12,5 +12,5 @@ def run_local_server(conf, ip, port):
     os.chdir(conf.output_dir)
 
     with socketserver.TCPServer((ip, port), Handler) as httpd:
-        print(f"Running Web Server at {ip}:{port}")
+        print(f"Running Web Server at http://{ip}:{port}")
         httpd.serve_forever()

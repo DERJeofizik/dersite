@@ -17,20 +17,24 @@ if __name__ == "__main__":
                                        help="command name")
     parser_download = subparsers.add_parser(
         "download", help="Download metadata from Youtube")
-    parser_download.add_argument("config_file", help="config file (toml)")
-    parser_download.add_argument("output_file", help="output json filename",
-                                 default="data.json")
+    parser_download.add_argument("config_file", default="config.toml",
+                                 nargs="?", help="config file (toml)")
+    parser_download.add_argument("output_file", default="data.json",
+                                 nargs="?", help="output json filename")
 
     parser_create = subparsers.add_parser("create",
                                           help="Create the website")
-    parser_create.add_argument("config_file", help="config file (toml)")
-    parser_create.add_argument("data_filename", help="metadata file (json)")
+    parser_create.add_argument("config_file", default="config.toml",
+                               nargs="?", help="config file (toml)")
+    parser_create.add_argument("data_filename", default="data.json",
+                               nargs="?", help="metadata file (json)")
     parser_create.add_argument("--base-url", "-b", default=None,
                                help="Base url (for localhost testing)")
 
     parser_server = subparsers.add_parser("server",
                                           help="Run local web server")
-    parser_server.add_argument("config_file", help="config file (toml)")
+    parser_server.add_argument("config_file", default="config.toml",
+                               nargs="?", help="config file (toml)")
     parser_server.add_argument("--ip", default="localhost",
                                help="localhost ip (localhost)")
     parser_server.add_argument("--port", "-p", default=8000,
@@ -38,11 +42,14 @@ if __name__ == "__main__":
 
     parser_deploy = subparsers.add_parser("deploy",
                                           help="Run deployment commands")
-    parser_deploy.add_argument("config_file", help="config file (toml)")
+    parser_deploy.add_argument("config_file", default="config.toml",
+                               nargs="?", help="config file (toml)")
 
     args = parser.parse_args()
 
-    conf = load_config(args.config_file)
+    if args.command:
+        conf = load_config(args.config_file)
+
     if args.command == "download":
         download_channel_info(conf.channel_id,
                               args.output_file)

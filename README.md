@@ -7,43 +7,57 @@ Downloads data from YouTube and creates a static web site.
 
 Clone the repository:
 
-    git clone --recursive https://github.com/DERJeofizik/dersite
-    cd dersite
+```sh
+git clone --recursive https://github.com/DERJeofizik/dersite.git
+cd dersite
+```
 
 Create a virtual environment and activate it:
 
-    python3 -m venv env
-    source env/bin/activate
+```sh
+python3 -m venv env
+source env/bin/activate
+```
 
 Install required packages
 
-    pip install -r requirements.txt
+```sh
+pip install -r requirements.txt
+```
 
 
 ## Running
 
-Download data from YouTube (channel_id should be set in config file).
+Download data from YouTube (channel_id should be set in config file `config.toml`).
 
-    python run.py download config.toml data.json
+```sh
+./run.py download
+```
 
 Create the web site:
 
-    python run.py create config.toml data.json
+```sh
+./run.py create
+```
 
 Deploy using git (updates the submodule and commits the changes)
 
-    python run.py deploy config.toml
-
+```
+./run.py deploy
+```
 
 ## Local development
 
 You can change the base URL for local testing
 
-    python run.py create config.toml data.json -b http://localhost:8000
-
+```sh
+./run.py create -b http://localhost:8000
+```
 You can run local server:
 
-    python run.py server config.toml
+```
+./run.py server
+```
 
 
 You can go to http://localhost:8000 to visit the web site.
