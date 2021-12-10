@@ -3,9 +3,9 @@
 {% block content %}
   {% for entry in entries %}
     <div class="video-card">
-      <a href="video/{{entry['slug']}}.html">
+      <a href="{{ video_url }}/{{entry['slug']}}.html">
         <img src="{{ entry['thumbnail'] }}" loading="lazy"/></a>
-      <a href="video/{{entry['slug']}}.html" class="name">{{ entry['title'] }}</a>
+      <a href="{{ video_url }}/{{entry['slug']}}.html" class="name">{{ entry['title'] }}</a>
     </div>
  {% endfor %}
 {% endblock %}

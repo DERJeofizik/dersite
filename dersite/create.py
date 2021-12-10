@@ -64,7 +64,10 @@ def create(conf: Config, data_filename, base_url=None):
     # common data to pass to the templates
     common_data = {
         "playlists": playlists_data["entries"],
-        "pages": pages
+        "pages": pages,
+        "video_url": "video",
+        "page_url": "sayfa",
+        "list_url": "liste"
     }
 
     print("Creating index.html...")
@@ -73,7 +76,7 @@ def create(conf: Config, data_filename, base_url=None):
                      entries=videos_data["entries"][0]["entries"],
                      **common_data)
 
-    video_dir = conf.output_dir / "video"
+    video_dir = conf.output_dir / common_data["video_url"]
     os.makedirs(video_dir)
     print("Creating video pages...")
     for entry in videos_data["entries"][0]["entries"]:
@@ -82,7 +85,7 @@ def create(conf: Config, data_filename, base_url=None):
                          entry=entry,
                          **common_data)
 
-    list_dir = conf.output_dir / "liste"
+    list_dir = conf.output_dir / common_data["list_url"]
     os.makedirs(list_dir)
     print("Creating playlist pages...")
     for entry in playlists_data["entries"]:
@@ -96,7 +99,7 @@ def create(conf: Config, data_filename, base_url=None):
     utils.copy_files(str(conf.include_dir / "*"), conf.output_dir)
 
     print("Creating Pages...")
-    page_dir = conf.output_dir / "sayfa"
+    page_dir = conf.output_dir / common_data["page_url"]
     os.makedirs(page_dir)
     for page, info in pages.items():
         url = page_dir / (info["slug"]+".html")
