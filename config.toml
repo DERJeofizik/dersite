@@ -3,6 +3,7 @@ channel_id = "UCJjDSNZrtrKTmlNjAjuhP0Q"
 base_url = "https://derjeofizik.github.io"
 template_dir = "templates"
 output_dir = "output"
+pages_dir = "pages"
 include_dir = "templates/include"
 deploy_dir = "derjeofizik.github.io"
 

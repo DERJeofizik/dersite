@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }} - {{ sitetitle }}{% endblock %}
+{% block subtitle %}
+<h2>{{ subtitle }}</h2>
+{% endblock %}
+{% block content %}
+
+{% autoescape false %}
+<div class="video-watch">
+<div class="container">
+  {{ content }}
+</div>
+</div>
+{% endautoescape %}
+{% endblock %}

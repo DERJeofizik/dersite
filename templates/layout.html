@@ -17,6 +17,10 @@
     <div id="menu">
       {% block menu %}
         <ul>
+        {% for page, info in pages.items() %}
+            <li><a href="{{ base_url }}/sayfa/{{ info['slug'] }}.html">{{ info['title'] }}</a></li>
+          {% endfor %}
+
           {% for playlist in playlists %}
             <li><a href="{{ base_url }}/liste/{{ playlist['slug'] }}.html">{{ playlist['title'] }}</a></li>
           {% endfor %}

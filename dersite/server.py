@@ -19,6 +19,8 @@ def run_local_server(conf, ip, port):
 def run_dev_server(conf, ip, port):
     from livereload import Server, shell
     server = Server()
-    server.watch(conf.template_dir,
-                 shell(f"./run.py create -b http://{ip}:{port}"))
+    recreate_command = f"./run.py create -b http://{ip}:{port}"
+    server.watch("dersite", shell(recreate_command))
+    server.watch(conf.template_dir, shell(recreate_command))
+    server.watch(conf.pages_dir, shell(recreate_command))
     server.serve(host=ip, port=port, root=conf.output_dir)

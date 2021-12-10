@@ -7,6 +7,8 @@ import os
 import glob
 import shutil
 
+import toml
+
 
 def load_json(filename):
     with open(filename) as f:
@@ -72,3 +74,7 @@ def copy_files(files, dst_folder):
             copy_files(f"{f}/*", new_dst)
         else:
             shutil.copy(f, dst_folder)
+
+
+def parse_toml(filename_or_str):
+    return toml.loads(filename_or_str)

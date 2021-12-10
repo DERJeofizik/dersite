@@ -24,6 +24,28 @@ def create(conf: Config, data_filename, base_url=None):
 
     c = WebsiteCreator(conf)
 
+    # Preparing pages
+    pages = {}
+    for page in conf.pages_dir.glob("*.md"):
+        with open(page) as f:
+            page_content = f.read()
+
+        name = page.stem
+        info = {"content": page_content, "title": name,
+                "subtitle": "", "slug": utils.slugify(name.lower())}
+
+        if page_content.startswith("+++\n"):
+            if page_content.count("+++\n") < 2:
+                raise Exception("Page markdown toml front matter line found (+++) but ending couldn't be found.")
+            data = page_content.split("+++\n")
+            front_matter = utils.parse_toml(data[1])
+            info.update(front_matter)
+            # Maybe content has +++ as well, we can reintroduce them here.
+            info["content"] = "+++\n".join(data[2:])
+
+        info["content"] = markdown.markdown(info["content"])
+        pages[name] = info
+
     videos_data = utils.load_youtube_data(data_filename, channel=True)
 
     # Add extra notes
@@ -39,11 +61,17 @@ def create(conf: Config, data_filename, base_url=None):
     playlists_data = utils.load_youtube_data(
         data_filename.replace(".json", "_playlists.json"))
 
+    # common data to pass to the templates
+    common_data = {
+        "playlists": playlists_data["entries"],
+        "pages": pages
+    }
+
     print("Creating index.html...")
     c.render_to_file("index.html",
                      conf.output_dir / "index.html",
                      entries=videos_data["entries"][0]["entries"],
-                     playlists=playlists_data["entries"])
+                     **common_data)
 
     video_dir = conf.output_dir / "video"
     os.makedirs(video_dir)
@@ -52,7 +80,7 @@ def create(conf: Config, data_filename, base_url=None):
         c.render_to_file("video.html",
                          video_dir / f"{entry['slug']}.html",
                          entry=entry,
-                         playlists=playlists_data["entries"])
+                         **common_data)
 
     list_dir = conf.output_dir / "liste"
     os.makedirs(list_dir)
@@ -62,7 +90,16 @@ def create(conf: Config, data_filename, base_url=None):
                          list_dir / f"{entry['slug']}.html",
                          entries=entry["entries"],
                          title=entry["title"],
-                         playlists=playlists_data["entries"])
+                         **common_data)
 
     print("Copying include files...")
     utils.copy_files(str(conf.include_dir / "*"), conf.output_dir)
+
+    print("Creating Pages...")
+    page_dir = conf.output_dir / "sayfa"
+    os.makedirs(page_dir)
+    for page, info in pages.items():
+        url = page_dir / (info["slug"]+".html")
+        c.render_to_file("page.html", url,
+                         **common_data,
+                         **info)
