@@ -1,0 +1,78 @@
++++
+title= "Hakkımızda"
+subtitle="Der Jeofizik Ekibi"
++++
+{% extends "layout.html" %}
+{% block title %}{{title}} - {{ sitetitle }}{% endblock %}
+{% block subtitle %}
+<h2>{{ subtitle }}</h2>
+{% endblock %}
+{% block style %}
+.authors ul {
+ 	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+.authors li {
+    list-style: none;
+    padding: 10px;
+    margin: 5px;
+}
+
+.author {
+    max-width: 300px;
+    background-color: #ddd;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08);
+    border-radius: 15px;
+    padding: 15px;
+}
+.author img {
+    padding-bottom: 10px;
+}
+
+.author .name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.author .info {
+    font-size: 16px;
+}
+
+.links li {
+    padding: 2px;
+}
+{% endblock %}
+{% block content %}
+
+DER Jeofizik kanalının amacı izleyicilerine yer bilimleriyle ilgili
+çeşitli teorik ve uygulamalı bilgiler vermek; yer kürenin
+katmanlarını, dünyamızın çeşitli bölgelerini, yeryüzünü ve yer altını
+jeolojik ve jeofiziksel yöntemlerin ışığında anlatmaktır.
+
+<div class="authors">
+<ul>
+  {% for author in authors.values() %}
+  <li>
+    <div class="author">
+      <center>
+      <img alt="Photo" src="{{ base_url }}/images/authors/{{ author['photo']}}"
+           height=300/>
+      </center>
+      <div class="info">
+        <div class="name">{{ author["name"] }}</div>
+        <div class="info">{% autoescape false %} {{ author["info"] | replace("\n", "<br />") }} {% endautoescape %}</div>
+        <ul class="links">
+          {% for link in author["links"] %}
+          <li><a href="{{link['url']}}">{{ link["name"] }}</a></li>
+          {% endfor %}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+</div>
+{% endblock %}

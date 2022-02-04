@@ -9,6 +9,7 @@ class Config:
     def __init__(self, title, channel_id, base_url,
                  template_dir, pages_dir,
                  output_dir, include_dir, deploy_dir,
+                 authors=None,
                  extra_notes=None):
         self.title = title
         self.channel_id = channel_id
@@ -22,6 +23,10 @@ class Config:
         if extra_notes is None:
             extra_notes = {}
         self.extra_notes = extra_notes
+
+        if authors is None:
+            authors = {}
+        self.authors = authors
 
 
 def load_config(filename):

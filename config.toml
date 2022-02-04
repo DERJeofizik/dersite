@@ -9,3 +9,79 @@ deploy_dir = "derjeofizik.github.io"
 
 [extra_notes]
 6D_Lo6ti9OY = "notes/karayip.md"
+
+[authors]
+
+[authors.dertuncay]
+name = "Deniz Ertuncay"
+info = '''Lisans eğitimini İstanbul Üniversitesi, jeofizik mühendisliği bölümünden, yüksek lisansını Boğaziçi Üniversitesi jeofizik bölümlerinden aldı. Doktorasını 2020 yılında Trieste Üniversitesi yer bilimleri ve matematik bölümünden aldı ve şu anda aynı bölümde doktora sonrası araştırmacı olarak çalışmalarını sürdürüyor.
+
+Araştırma konuları deprem yakın kaynak alanındaki sismik hareketler, sismolojide yapay zeka uygulamaları ve sismik izleme.
+
+TMMOB Jeofizik Mühendisleri Odası XIII ve XIV dönem yönetim kurullarında yer aldı.'''
+photo = "deniz_ertuncay.jpeg"
+
+[[authors.dertuncay.links]]
+name = "Web Sitesi"
+url = "https://dertuncay.wixsite.com/denizertuncay"
+
+[[authors.dertuncay.links]]
+name = "Twitter"
+url = "https://twitter.com/dertuncay"
+
+[authors.ebekin]
+name = "Ekrem Bekin"
+info = '''Lisans Eğitimini İstanbul Üniversitesi Jeofizik Müh. Bölümünden aldı.
+1.yüksek lisans derecesini Boğaziçi Üniversitesi KRDAE Jeofizik Bölümünden,
+2.yüksek lisans derecesini Memorial University of Newfoundland'tan aldı.
+2016 yılından beri İstanbul Üniversitesi-Cerrahpaşa Jeofizik Müh. Bölümünde
+doktora öğrencisidir.
+
+Araştırma Konuları: Manyetotellürik Yöntem, Zemin Sıvılaşması '''
+photo = "ekrem_bekin.jpeg"
+
+[[authors.ebekin.links]]
+name = "Twitter"
+url = "https://twitter.com/ekrembekin"
+
+[[authors.ebekin.links]]
+name = "Github"
+url = "https://github.com/ekrembkn"
+
+
+[authors.gizgi]
+name = "Gizem İzgi"
+info = '''Lisans eğitimini 2017, yüksek lisans eğitimini 2019 yılında İstanbul Teknik Üniversitesi\'nde tamamladı. 2019 yılından itibaren doktorasına Potsdam Üniversitesi Yer Bilimleri Enstitüsünde başladı ve halen devam ediyor.
+
+Araştırma konuları coda dalgaları, sismik sönümlenme, rotasyonel (dönel) sismoloji ve deprem lokasyonu.
+
+İtü Mezunlar Derneği bünyesinde iki dönemdir mentorlük ve mentor danışmanlığı görevini yapmakta.'''
+photo = "gizem_izgi.jpeg"
+
+[[authors.gizgi.links]]
+name = "Twitter"
+url = "https://twitter.com/izgizem"
+
+[[authors.gizgi.links]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/gizem-izgi-562b877a"
+
+[[authors.gizgi.links]]
+name = "ResearchGate"
+url = "https://www.researchgate.net/profile/Gizem_Izgi"
+
+[authors.rorsvuran]
+name = "Rıdvan Örsvuran"
+info = '''Lisans Eğitimini İstanbul Üniversitesi, Jeofizik Mühendisliğinden, yüksek lisansını Boğaziçi Üniversitesi jeofizik bölümünden aldı. Doktorasını ise Université Côte d'Azur
+yapti. Colorado School of Mines Jeofizik bolumunde doktora sonrası araştırmacı olarak çalışmalarını sürdürüyor.
+
+Araştırma konuları: Deprem kaynak mekanızmaları, sismik tomografi, sayısal yöntemler, yüksek performans bilgi-işlem.'''
+photo = "ridvan_orsvuran.jpg"
+
+[[authors.rorsvuran.links]]
+name = "Web Sitesi"
+url = "https://rdno.org"
+
+[[authors.rorsvuran.links]]
+name = "Twitter"
+url = "https://twitter.com/rdn0"

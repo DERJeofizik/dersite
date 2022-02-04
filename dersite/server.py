@@ -23,4 +23,5 @@ def run_dev_server(conf, ip, port):
     server.watch("dersite", shell(recreate_command))
     server.watch(conf.template_dir, shell(recreate_command))
     server.watch(conf.pages_dir, shell(recreate_command))
+    server.watch("config.toml", shell(recreate_command))
     server.serve(host=ip, port=port, root=conf.output_dir)
