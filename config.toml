@@ -14,9 +14,9 @@ deploy_dir = "derjeofizik.github.io"
 
 [authors.dertuncay]
 name = "Deniz Ertuncay"
-info = '''Lisans eğitimini İstanbul Üniversitesi, jeofizik mühendisliği bölümünden, yüksek lisansını Boğaziçi Üniversitesi jeofizik bölümlerinden aldı. Doktorasını 2020 yılında Trieste Üniversitesi yer bilimleri ve matematik bölümünden aldı ve şu anda aynı bölümde doktora sonrası araştırmacı olarak çalışmalarını sürdürüyor.
+info = '''Lisans eğitimini İstanbul Üniversitesi Jeofizik Mühendisliği bölümünden, yüksek lisansını Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü Jeofizik bölümünden aldı. Doktorasını 2020 yılında Trieste Üniversitesi Yer Bilimleri ve Matematik bölümünden aldı ve şu anda aynı bölümde doktora sonrası araştırmacı olarak çalışmalarını sürdürüyor.
 
-Araştırma konuları deprem yakın kaynak alanındaki sismik hareketler, sismolojide yapay zeka uygulamaları ve sismik izleme.
+Araştırma konuları: deprem yakın kaynak alanındaki sismik hareketler, sismolojide yapay zeka uygulamaları ve sismik izleme.
 
 TMMOB Jeofizik Mühendisleri Odası XIII ve XIV dönem yönetim kurullarında yer aldı.'''
 photo = "deniz_ertuncay.jpeg"
@@ -31,13 +31,13 @@ url = "https://twitter.com/dertuncay"
 
 [authors.ebekin]
 name = "Ekrem Bekin"
-info = '''Lisans Eğitimini İstanbul Üniversitesi Jeofizik Müh. Bölümünden aldı.
-1.yüksek lisans derecesini Boğaziçi Üniversitesi KRDAE Jeofizik Bölümünden,
-2.yüksek lisans derecesini Memorial University of Newfoundland'tan aldı.
-2016 yılından beri İstanbul Üniversitesi-Cerrahpaşa Jeofizik Müh. Bölümünde
+info = '''Lisans Eğitimini İstanbul Üniversitesi Jeofizik Mühendisliği bölümünden aldı.
+1. yüksek lisans derecesini Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü Jeofizik Bölümünden,
+2. yüksek lisans derecesini Memorial University of Newfoundland'tan aldı.
+2016 yılından beri İstanbul Üniversitesi-Cerrahpaşa Jeofizik Mühendisliği Bölümünde
 doktora öğrencisidir.
 
-Araştırma Konuları: Manyetotellürik Yöntem, Zemin Sıvılaşması '''
+Araştırma Konuları: manyetotellürik yöntem, zemin sıvılaşması '''
 photo = "ekrem_bekin.jpeg"
 
 [[authors.ebekin.links]]
@@ -51,11 +51,11 @@ url = "https://github.com/ekrembkn"
 
 [authors.gizgi]
 name = "Gizem İzgi"
-info = '''Lisans eğitimini 2017, yüksek lisans eğitimini 2019 yılında İstanbul Teknik Üniversitesi\'nde tamamladı. 2019 yılından itibaren doktorasına Potsdam Üniversitesi Yer Bilimleri Enstitüsünde başladı ve halen devam ediyor.
+info = '''Lisans eğitimini 2017, yüksek lisans eğitimini 2019 yılında İstanbul Teknik Üniversitesi Jeofizik Mühendisliği bölümünde tamamladı. 2019 yılından itibaren doktorasına Potsdam Üniversitesi Yer Bilimleri Enstitüsünde başladı ve halen devam ediyor.
 
-Araştırma konuları coda dalgaları, sismik sönümlenme, rotasyonel (dönel) sismoloji ve deprem lokasyonu.
+Araştırma konuları: coda dalgaları, sismik sönümlenme, rotasyonel (dönel) sismoloji ve deprem lokasyonu.
 
-İtü Mezunlar Derneği bünyesinde iki dönemdir mentorlük ve mentor danışmanlığı görevini yapmakta.'''
+İTÜ Mezunlar Derneği bünyesinde iki dönemdir mentorlük ve mentor danışmanlığı görevini yapmakta.'''
 photo = "gizem_izgi.jpeg"
 
 [[authors.gizgi.links]]
@@ -72,10 +72,10 @@ url = "https://www.researchgate.net/profile/Gizem_Izgi"
 
 [authors.rorsvuran]
 name = "Rıdvan Örsvuran"
-info = '''Lisans Eğitimini İstanbul Üniversitesi, Jeofizik Mühendisliğinden, yüksek lisansını Boğaziçi Üniversitesi jeofizik bölümünden aldı. Doktorasını ise Université Côte d'Azur
-yapti. Colorado School of Mines Jeofizik bolumunde doktora sonrası araştırmacı olarak çalışmalarını sürdürüyor.
+info = '''Lisans Eğitimini İstanbul Üniversitesi Jeofizik Mühendisliğinden, yüksek lisansını Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü Jeofizik bölümünden aldı. Doktorasını Université Côte d'Azur'da
+yaptı. Colorado School of Mines Jeofizik bölümünde doktora sonrası araştırmacı olarak çalışmalarını sürdürüyor.
 
-Araştırma konuları: Deprem kaynak mekanızmaları, sismik tomografi, sayısal yöntemler, yüksek performans bilgi-işlem.'''
+Araştırma konuları: sismik tomografi, deprem kaynak mekanizmaları,  sayısal yöntemler, yüksek performans bilgi-işlem.'''
 photo = "ridvan_orsvuran.jpg"
 
 [[authors.rorsvuran.links]]
