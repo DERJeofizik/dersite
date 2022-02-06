@@ -67,7 +67,7 @@ jeolojik ve jeofiziksel yöntemlerin ışığında anlatmaktır.
         <div class="info">{% autoescape false %} {{ author["info"] | replace("\n", "<br />") }} {% endautoescape %}</div>
         <ul class="links">
           {% for link in author["links"] %}
-          <li><a href="{{link['url']}}">{{ link["name"] }}</a></li>
+          <li><a href="{{link['url']}}" target="_blank">{{ link["name"] }}</a></li>
           {% endfor %}
       </div>
     </div>
