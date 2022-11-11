@@ -49,6 +49,7 @@ body {
 
 .video-card a img {
     width: 500px;
+    height: 280px;
 }
 
 .video-card a.name {
