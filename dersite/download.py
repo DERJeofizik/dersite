@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 
 
-import youtube_dl
+import yt_dlp
 from . import utils
 
 
 def download_info(url, filename):
-    with youtube_dl.YoutubeDL() as ydl:
+    with yt_dlp.YoutubeDL() as ydl:
         info = ydl.extract_info(url, download=False)
     utils.write_json(filename, info)
 
