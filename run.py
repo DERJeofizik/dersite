@@ -55,6 +55,11 @@ if __name__ == "__main__":
     parser_deploy.add_argument("config_file", default="config.toml",
                                nargs="?", help="config file (toml)")
 
+    parser_update = subparsers.add_parser("update",
+                                          help="Update the website")
+    parser_update.add_argument("config_file", default="config.toml",
+                               nargs="?", help="config file (toml)")
+
     args = parser.parse_args()
 
     if args.command:
@@ -70,6 +75,11 @@ if __name__ == "__main__":
     elif args.command == "devserver":
         run_dev_server(conf, args.ip, args.port)
     elif args.command == "deploy":
+        deploy(conf)
+    elif args.command == "update":
+        data_filename = "data.json"
+        download_channel_info(conf.channel_id, data_filename)
+        create(conf, data_filename, conf.base_url)
         deploy(conf)
     else:
         print("No job is given.")

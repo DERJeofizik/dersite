@@ -46,6 +46,14 @@ Deploy using git (updates the submodule and commits the changes)
 ./run.py deploy
 ```
 
+## Updating the website
+
+You can run the following to update the website (`download`, `create` and `deploy`).
+
+```sh
+./run.py update
+```
+
 ## Local development
 
 You can change the base URL for local testing
